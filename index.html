@@ -51,13 +51,19 @@ body {
 <script>
 // Set the date we're counting down to
 
-function nextDate(dayIndex) {
-    var today = new Date();
-    today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
-    today.setHours(3,0,0,0)
-    return today;
-}
+// function nextDate(dayIndex) {
+//     var today = new Date();
+//     today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
+//     today.setHours(3,0,0,0)
+//     return today;
+// }
 
+function nextDate(trash) {
+  var today = new Date();
+  today.setMinutes(today.getMinutes() + 1);
+  retrun today;
+}
+  
 var countDownDate = nextDate(0);
 //var countDownDate = new Date("Aug 6, 2023 03:00:00").getTime();
 
