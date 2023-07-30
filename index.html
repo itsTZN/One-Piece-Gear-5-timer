@@ -10,14 +10,25 @@ p {
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
+  font: helvetica;
 }
 h1 {
   position:absolute;
-  top: 35%; left: 42%;
+  top: 35%; left: 40%;
   color: white;
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
+  font: helvetica;
+}
+  h2 {
+  position:absolute;
+  top: 42%; left: 37%;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  font: helvetica;
 }
 body {
   background-image: url('Gear5.png');
@@ -28,7 +39,8 @@ body {
 </style>
 </head>
 <body>
-<h1>One Piece</h1>
+<h1>ONE PIECE</h1>
+<h2>NEXT EPISODES:</h2>
 <p id="demo"></p>
 
 <script>
@@ -52,8 +64,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+  + minutes + "M " + seconds + "S ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
