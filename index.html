@@ -46,12 +46,18 @@ body {
 <body>
 <h1>ONE PIECE</h1>
 <h2>NEXT EPISODES:</h2>
-<p id="demo"></p>
+<p id="counter"></p>
 
 <script>
 // Set the date we're counting down to
 
-var countDownDate = new Date("Aug 6, 2023 03:00:00").getTime();
+function nextDate(dayIndex) {
+    var today = new Date();
+    today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
+    return today;
+}
+
+var countDownDate = nextDate(0);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -69,13 +75,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+  document.getElementById("counter").innerHTML = days + " : " + hours + " : "
   + minutes + " : " + seconds + " ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("counter").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
