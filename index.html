@@ -54,7 +54,7 @@ body {
 function nextDate(dayIndex) {
     var today = new Date();
     today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
-    today.setHours(today.getHours() + 3);
+    today.setHours(3,0,0,0)
     return today;
 }
 
@@ -81,9 +81,8 @@ var x = setInterval(function() {
   + minutes + " : " + seconds + " ";
     
   // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("counter").innerHTML = "EXPIRED";
+  if (distance === 0) {
+     countDownDate = nextDate(0);
   }
 }, 1000);
 </script>
