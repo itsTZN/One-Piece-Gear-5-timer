@@ -54,6 +54,7 @@ body {
 function nextDate(dayIndex) {
     var today = new Date();
     today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
+    today.setHours(today.getHours() + 3);
     return today;
 }
 
