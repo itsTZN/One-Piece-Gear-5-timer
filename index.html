@@ -1,37 +1,42 @@
 <!DOCTYPE HTML>
 <html>
+<title>
+  One Piece Timer
+</title>
 <head>
+  <link rel="icon" type="images/x-icon" href="Logo.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  @import url('https://www.dafontfree.io/one-piece-font/');
 p {
   position:absolute;
-  top: 52%; left: 39%;
+  top: 60%; left: 11%;
   color: white;
   text-align: center;
-  font-size: 60px;
+  font-size: 55px;
   margin-top: 0px;
-  font-family: Montserrat;
+  font-family: 'One Piece', sans-serif
 }
 h1 {
   position:absolute;
-  top: 35%; left: 40%;
+  top: 40%; left: 11%;
   color: white;
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif
 }
   h2 {
   position:absolute;
-  top: 43%; left: 37%;
+  top: 50%; left: 11%;
   color: white;
   text-align: center;
   font-size: 60px;
   margin-top: 0px;
-  font-family: Montserrat;
+  font-family: 'One Piece', sans-serif
 }
 body {
-  background-image: url('Gear5.png');
+  background-image: url('Luffy.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -64,8 +69,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "D " + hours + "H "
-  + minutes + "M " + seconds + "S ";
+  document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+  + minutes + " : " + seconds + " ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
