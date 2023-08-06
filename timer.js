@@ -1,7 +1,13 @@
 function nextDate(dayIndex) {
-    var today = new Date();
-    today.setDate(today.getDate() + (dayIndex - 1 - today.getDay() + 7) % 7 + 1);
-    today.setHours(3,0,0,0)
+    let today = new Date();
+    today.setUTCDate(today.getUTCDate() + (dayIndex - 1 - today.getUTCDay() + 7) % 7 + 1);
+    today.setUTCHours(2, 0, 0, 0);
+
+    if (today.getUTCDay() === 0 && today.getUTCHours() < 2) {
+        today.setUTCDate(today.getUTCDate() - 7);
+    }
+
+
     return today;
 }
 
